@@ -1,0 +1,6 @@
+work/
+outputs/
+.impeccable/review/
+graphify-out/.graphify_*
+graphify-out/cache/
+graphify-out/transcripts/

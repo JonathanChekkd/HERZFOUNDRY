@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-20T07:22:06Z",
+  "title": "Design System: HERZ FOUNDRY",
+  "extensions": {
+    "colorMeta": {
+      "optical-black": {
+        "role": "neutral",
+        "displayName": "Optical Black",
+        "tonalRamp": ["oklch(15% 0 0)", "oklch(25% 0 0)", "oklch(36% 0 0)", "oklch(48% 0 0)", "oklch(60% 0 0)", "oklch(72% 0 0)", "oklch(84% 0 0)", "oklch(95% 0 0)"]
+      },
+      "raised-black": {
+        "role": "neutral",
+        "displayName": "Raised Black",
+        "tonalRamp": ["oklch(15% 0.002 285)", "oklch(25% 0.002 285)", "oklch(36% 0.002 285)", "oklch(48% 0.002 285)", "oklch(60% 0.002 285)", "oklch(72% 0.002 285)", "oklch(84% 0.002 285)", "oklch(95% 0.002 285)"]
+      },
+      "plate-black": {
+        "role": "neutral",
+        "displayName": "Plate Black",
+        "tonalRamp": ["oklch(15% 0.003 285)", "oklch(25% 0.003 285)", "oklch(36% 0.003 285)", "oklch(48% 0.003 285)", "oklch(60% 0.003 285)", "oklch(72% 0.003 285)", "oklch(84% 0.003 285)", "oklch(95% 0.003 285)"]
+      },
+      "mineral-white": {
+        "role": "neutral",
+        "displayName": "Mineral White",
+        "tonalRamp": ["oklch(15% 0.006 85)", "oklch(25% 0.006 85)", "oklch(36% 0.006 85)", "oklch(48% 0.006 85)", "oklch(60% 0.006 85)", "oklch(72% 0.006 85)", "oklch(84% 0.006 85)", "oklch(95% 0.006 85)"]
+      },
+      "muted-mineral": {
+        "role": "neutral",
+        "displayName": "Muted Mineral",
+        "tonalRamp": ["oklch(15% 0.005 85)", "oklch(25% 0.005 85)", "oklch(36% 0.005 85)", "oklch(48% 0.005 85)", "oklch(60% 0.005 85)", "oklch(72% 0.005 85)", "oklch(84% 0.005 85)", "oklch(95% 0.005 85)"]
+      },
+      "spectral-violet": {
+        "role": "primary",
+        "displayName": "Spectral Violet",
+        "tonalRamp": ["oklch(15% 0.16 286)", "oklch(25% 0.16 286)", "oklch(36% 0.16 286)", "oklch(48% 0.16 286)", "oklch(60% 0.16 286)", "oklch(72% 0.14 286)", "oklch(84% 0.09 286)", "oklch(95% 0.03 286)"]
+      },
+      "ember": {
+        "role": "secondary",
+        "displayName": "Ember",
+        "tonalRamp": ["oklch(15% 0.14 42)", "oklch(25% 0.14 42)", "oklch(36% 0.14 42)", "oklch(48% 0.14 42)", "oklch(60% 0.14 42)", "oklch(72% 0.12 42)", "oklch(84% 0.08 42)", "oklch(95% 0.025 42)"]
+      },
+      "soft-copy": {
+        "role": "neutral",
+        "displayName": "Soft Copy",
+        "tonalRamp": ["oklch(15% 0.006 85)", "oklch(25% 0.006 85)", "oklch(36% 0.006 85)", "oklch(48% 0.006 85)", "oklch(60% 0.006 85)", "oklch(72% 0.006 85)", "oklch(84% 0.006 85)", "oklch(95% 0.006 85)"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero identity and the largest brand statements." },
+      "headline": { "displayName": "Headline", "purpose": "Major section and contact statements." },
+      "title": { "displayName": "Title", "purpose": "Workflow, comparison, and compact engineered headings." },
+      "body": { "displayName": "Body", "purpose": "Readable explanatory copy and biography." },
+      "label": { "displayName": "Label", "purpose": "Uppercase navigation, actions, proof, and media metadata." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "optical-ease", "value": "cubic-bezier(.16, 1, .3, 1)", "purpose": "Stage, image, and reveal transitions." },
+      { "name": "button-state", "value": "250ms", "purpose": "Button color, background, and lift states." },
+      { "name": "plate-state", "value": "700ms", "purpose": "Plate opacity, border, and saturation transitions." },
+      { "name": "plate-image", "value": "1200ms", "purpose": "Subtle active-image scale transition." },
+      { "name": "stage-interval", "value": "2400ms", "purpose": "Automatic live-stage focus advance when motion is permitted." },
+      { "name": "reduced-motion", "value": "0.01ms", "purpose": "Effectively immediate transition duration when reduced motion is requested." }
+    ],
+    "breakpoints": [
+      { "name": "compact-desktop", "value": "980px" },
+      { "name": "mobile", "value": "680px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Outline Action",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "The primary hard-edged action used against optical surfaces.",
+      "html": "<a class=\"ds-button\" href=\"#\">Start a project</a>",
+      "css": ".ds-button { display:inline-flex; align-items:center; justify-content:center; min-height:3rem; padding:.75rem 1.2rem; border:1px solid var(--paper, #f2f0eb); color:var(--paper, #f2f0eb); font:400 .7rem/1.2 var(--body, Manrope, sans-serif); letter-spacing:.12em; text-transform:uppercase; text-decoration:none; transition:background .25s, color .25s, transform .25s; } .ds-button:hover { background:var(--paper, #f2f0eb); color:var(--ink, #080808); transform:translateY(-2px); } .ds-button:focus-visible { outline:2px solid var(--paper, #f2f0eb); outline-offset:5px; }"
+    },
+    {
+      "name": "Text Action",
+      "kind": "button",
+      "description": "A secondary action that stays visually subordinate to the outlined action.",
+      "html": "<a class=\"ds-text-link\" href=\"#\">Explore archive</a>",
+      "css": ".ds-text-link { color:#cbc8c1; font:400 .75rem/1.2 var(--body, Manrope, sans-serif); letter-spacing:.12em; text-transform:uppercase; text-decoration:underline; text-underline-offset:.45rem; } .ds-text-link:hover { color:var(--paper, #f2f0eb); } .ds-text-link:focus-visible { outline:2px solid var(--paper, #f2f0eb); outline-offset:5px; }"
+    },
+    {
+      "name": "Navigation Call to Action",
+      "kind": "nav",
+      "refersTo": "nav-call-to-action",
+      "description": "The final header link, promoted with a quiet hard rule.",
+      "html": "<a class=\"ds-nav-cta\" href=\"#\">Start a project</a>",
+      "css": ".ds-nav-cta { display:inline-block; border:1px solid rgba(242,240,235,.16); padding:.65rem 1rem; color:var(--paper, #f2f0eb); font:400 .72rem/1.2 var(--body, Manrope, sans-serif); letter-spacing:.12em; text-transform:uppercase; text-decoration:none; } .ds-nav-cta:hover { border-color:rgba(242,240,235,.52); } .ds-nav-cta:focus-visible { outline:2px solid var(--paper, #f2f0eb); outline-offset:5px; }"
+    },
+    {
+      "name": "Product Plate",
+      "kind": "card",
+      "description": "A cropped optical media plane with a directly overlaid label.",
+      "html": "<figure class=\"ds-plate\" tabindex=\"0\"><div class=\"ds-plate-media\"></div><figcaption class=\"ds-plate-label\">Product visualization</figcaption></figure>",
+      "css": ".ds-plate { position:relative; width:15rem; aspect-ratio:9/16; overflow:hidden; margin:0; background:#171719; border:1px solid rgba(242,240,235,.16); opacity:.62; transition:opacity .7s cubic-bezier(.16,1,.3,1), border-color .7s cubic-bezier(.16,1,.3,1); } .ds-plate-media { width:100%; height:100%; background:linear-gradient(135deg, rgba(117,97,255,.4), #171719 48%, rgba(240,104,53,.36)); filter:saturate(.72); transition:filter .7s cubic-bezier(.16,1,.3,1), transform 1.2s cubic-bezier(.16,1,.3,1); } .ds-plate-label { position:absolute; left:.8rem; bottom:.8rem; padding:.4rem .55rem; background:rgba(8,8,8,.78); color:#f2f0eb; font:400 .7rem/1.2 Manrope,sans-serif; letter-spacing:.13em; text-transform:uppercase; } .ds-plate:hover, .ds-plate:focus { opacity:1; border-color:rgba(242,240,235,.52); } .ds-plate:hover .ds-plate-media, .ds-plate:focus .ds-plate-media { filter:saturate(1); transform:scale(1.025); } .ds-plate:focus-visible { outline:2px solid #f2f0eb; outline-offset:5px; }"
+    },
+    {
+      "name": "Reel Control",
+      "kind": "button",
+      "description": "An in-frame play/pause control for portrait motion reels.",
+      "html": "<button class=\"ds-reel-control\" type=\"button\" aria-pressed=\"false\">Play reel 01</button>",
+      "css": ".ds-reel-control { border:1px solid rgba(242,240,235,.55); background:rgba(8,8,8,.72); color:#f2f0eb; padding:.85rem 1rem; cursor:pointer; font:400 .7rem/1.2 Manrope,sans-serif; letter-spacing:.12em; text-transform:uppercase; } .ds-reel-control:hover { background:#f2f0eb; color:#080808; } .ds-reel-control:focus-visible { outline:2px solid #f2f0eb; outline-offset:5px; }"
+    },
+    {
+      "name": "Comparison Instrument",
+      "kind": "custom",
+      "refersTo": "slider-handle",
+      "description": "A visible measurement line and circular drag handle for before/after evidence.",
+      "html": "<div class=\"ds-compare\"><span class=\"ds-before\">Before</span><span class=\"ds-after\">After</span><span class=\"ds-line\"></span><span class=\"ds-handle\" aria-hidden=\"true\">&#8596;</span><input aria-label=\"Compare before and after\" type=\"range\" min=\"0\" max=\"100\" value=\"50\"></div>",
+      "css": ".ds-compare { position:relative; width:15rem; aspect-ratio:9/16; overflow:hidden; background:linear-gradient(90deg,#171719 0 50%,#7561ff 50% 100%); color:#f2f0eb; } .ds-before,.ds-after { position:absolute; bottom:.7rem; z-index:2; padding:.35rem .5rem; background:rgba(8,8,8,.78); font:400 .7rem/1.2 Manrope,sans-serif; letter-spacing:.1em; text-transform:uppercase; pointer-events:none; } .ds-before { left:.7rem; } .ds-after { right:.7rem; } .ds-line { position:absolute; inset:0 auto 0 50%; width:1px; background:#f2f0eb; } .ds-handle { position:absolute; left:50%; top:50%; z-index:2; width:2.5rem; height:2.5rem; border-radius:50%; background:#f2f0eb; color:#080808; display:grid; place-items:center; transform:translate(-50%,-50%); font-weight:600; } .ds-compare input { position:absolute; inset:0; z-index:3; width:100%; height:100%; opacity:0; cursor:ew-resize; } .ds-compare input:focus-visible { outline:2px solid #f2f0eb; outline-offset:-7px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Chromatic Light Stage",
+    "overview": "HERZ FOUNDRY behaves like a controlled optical set rather than a generic dark-agency card stack. Near-black surfaces make the supplied product imagery the brightest evidence; mineral-white type, thin measurement rules, and restrained spectral color create the sense of a precise studio instrument. Violet and ember are atmospheric light sources, never broad brand paint.\n\nThe system is cinematic but disciplined. Cropped portrait media, hard-edged controls, asymmetric image plates, and large stretches of darkness build tension without obscuring the work. The experience remains direct: the product is visible immediately, production rigor is demonstrated with real media, and contact actions are unmistakable.",
+    "keyCharacteristics": [
+      "Near-black optical surfaces with mineral-white typography.",
+      "Restrained violet and ember light fields used for atmosphere and orientation.",
+      "Hard rules, square controls, and cropped media plates instead of soft card stacks.",
+      "Asymmetric editorial compositions that resolve into compact grids on small screens.",
+      "Motion that clarifies active media and reveal state, with a complete reduced-motion path."
+    ],
+    "rules": [
+      { "name": "The Colored-Light Rule", "body": "Violet and ember should read as light falling across a dark stage. Keep opaque accent areas rare and use restrained transparency for fields.", "section": "colors" },
+      { "name": "The Mineral Contrast Rule", "body": "Use mineral white against optical black for critical text and actions; use muted mineral only for genuinely secondary information.", "section": "colors" },
+      { "name": "The Engineered Display Rule", "body": "Unbounded is reserved for decisive names, numbers, and headings. Paragraphs and operational labels remain in Manrope.", "section": "typography" },
+      { "name": "The Quiet Label Rule", "body": "Labels gain hierarchy through uppercase and tracking, not bold weight.", "section": "typography" },
+      { "name": "The Asymmetric Plate Rule", "body": "Media collections must keep a dominant frame and a supporting rhythm; equal cards are reserved for repeated reels or client marks where comparison is the job.", "section": "layout" },
+      { "name": "The Optical Depth Rule", "body": "Create depth with light, crop, tone, and focus. Do not introduce generic floating-card shadows.", "section": "elevation" },
+      { "name": "The Hard-Edge Rule", "body": "Do not soften primary containers or controls. A circle should signal a draggable instrument, not a general decoration.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do lead with real product media at full useful scale and retain its portrait crop.",
+      "Do use rules, tone, saturation, and colored light to create hierarchy on dark surfaces.",
+      "Do keep desktop compositions asymmetric while preserving the dominant/supporting relationship on mobile.",
+      "Do preserve the mineral-white focus outline and the keyboard/touch behavior of every interactive media control.",
+      "Do treat reduced motion as a complete static presentation, not merely shorter animation.",
+      "Do style browser-level details—selection, scrollbar, theme color, and skip navigation—as part of the same optical world."
+    ],
+    "donts": [
+      "Don't replace the stage with a generic equal-card grid or add rounded agency-style cards.",
+      "Don't flood sections with opaque violet or ember; their restraint is what makes them feel luminous.",
+      "Don't add conventional drop shadows, glass panels, glossy pills, or decorative gradients unrelated to stage lighting.",
+      "Don't use Unbounded for long paragraphs or increase label hierarchy with heavy weight.",
+      "Don't hide focus, rely on hover alone, autoplay video, or leave reveal content suppressed when motion is reduced."
+    ]
+  }
+}
