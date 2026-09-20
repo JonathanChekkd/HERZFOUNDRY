@@ -9,13 +9,13 @@ colors:
   muted-mineral: "#aaa8a3"
   spectral-violet: "#7561ff"
   ember: "#f06835"
-  soft-copy: "#c6c3bd"
+  soft-copy: "#d5d2cc"
 typography:
   display:
     fontFamily: "Unbounded, sans-serif"
-    fontSize: "clamp(3rem, 6.4vw, 6rem)"
+    fontSize: "clamp(3.7rem, 7vw, 6rem)"
     fontWeight: 400
-    lineHeight: 0.94
+    lineHeight: 0.9
     letterSpacing: "-0.04em"
   headline:
     fontFamily: "Unbounded, sans-serif"
@@ -25,7 +25,7 @@ typography:
     letterSpacing: "-0.04em"
   title:
     fontFamily: "Unbounded, sans-serif"
-    fontSize: "1rem"
+    fontSize: "1.2rem"
     fontWeight: 400
   body:
     fontFamily: "Manrope, sans-serif"
@@ -46,7 +46,7 @@ spacing:
   section-space: "clamp(5rem, 10vw, 10rem)"
   control-x: "1.2rem"
   control-y: "0.75rem"
-  plate-gap: "0.75rem"
+  plate-gap: "0.6rem"
 components:
   button-outline:
     backgroundColor: "transparent"
@@ -83,7 +83,7 @@ components:
 
 **Creative North Star: "Chromatic Light Stage"**
 
-HERZ FOUNDRY behaves like a controlled optical set rather than a generic dark-agency card stack. Near-black surfaces make the supplied product imagery the brightest evidence; mineral-white type, thin measurement rules, and restrained spectral color create the sense of a precise studio instrument. Violet and ember are atmospheric light sources, never broad brand paint.
+HERZ FOUNDRY behaves like a controlled optical set rather than a generic dark-agency card stack. Near-black surfaces make the supplied product imagery the brightest evidence; mineral-white type, thin measurement rules, and restrained spectral color create the sense of a precise studio instrument. The first viewport places decisive type directly over full-scale CGI work, while violet and ember act as atmospheric light sources rather than broad brand paint.
 
 The system is cinematic but disciplined. Cropped portrait media, hard-edged controls, asymmetric image plates, and large stretches of darkness build tension without obscuring the work. The experience remains direct: the product is visible immediately, production rigor is demonstrated with real media, and contact actions are unmistakable.
 
@@ -132,9 +132,9 @@ The palette is primarily achromatic; its two chromatic accents behave as colored
 
 ### Hierarchy
 
-- **Display** (400, fluid from `3rem` to `6rem`, `0.94` line-height): Hero identity; keep the measure compact at roughly nine characters.
+- **Display** (400, fluid from `3.7rem` to `6rem`, `0.9` line-height): Hero identity; keep the measure compact at roughly nine characters. On mobile, the range resolves to `2.8rem–4rem` at `13vw`.
 - **Headline** (400, fluid from `2.1rem` to `4.8rem`, `1` line-height): Major section statements and contact proposition.
-- **Title** (400, `1rem`): Workflow steps and comparison headings; use Unbounded without artificial boldness.
+- **Title** (400, `1.2rem–1.25rem`): Workflow steps and comparison headings; use Unbounded without artificial boldness.
 - **Body** (400, `1rem`, `1.65` line-height): Explanatory prose, generally constrained to `55–70ch`.
 - **Label** (400, `0.7rem`, `0.12em` tracking, uppercase): Navigation, actions, media metadata, proof rails, and browser-like controls.
 
@@ -148,15 +148,15 @@ The palette is primarily achromatic; its two chromatic accents behave as colored
 
 The page uses a centered shell capped at `112rem`, with a fluid page gutter and a fluid section interval. Thin horizontal rules establish measurement lines between title blocks, proof, metrics, services, clients, and the footer.
 
-Desktop compositions are deliberately asymmetric. The first viewport divides the promise and the four-frame live stage into unequal columns; the primary stage plate spans all three rows while three smaller plates form a control strip. The still archive alternates a `1.2fr / 0.8fr` rhythm with staggered vertical offsets, the making section places comparisons beside a sticky workflow, and the profile gives more room to biography than portraiture.
+Desktop compositions are deliberately asymmetric. The first viewport is a full-height immersive stage: the title, promise, and actions sit above full-scale CGI, while the four-frame stage begins at 30% of the viewport width. Its primary plate spans all three rows and three smaller plates form a narrow right control rail. Directional black gradients protect copy without flattening the imagery. The still archive alternates a `1.2fr / 0.8fr` rhythm with staggered vertical offsets, the making section places comparisons beside a sticky workflow, and the profile gives more room to biography than portraiture.
 
-At `980px` and below, the hero becomes one column, the proof rail leaves absolute positioning, the making section stacks, comparisons share two columns, and the client rail becomes two columns. At `680px` and below, primary navigation is hidden, all section heads stack, stills and reels remain two-up, comparisons and profile become single-column, metrics become a vertical ruled list, and the footer stacks. The live stage retains its major/minor plate relationship at a compact `30rem` height rather than collapsing into undifferentiated cards.
+At `980px` and below, the hero remains a full-height overlay composition while the stage expands leftward, the making section stacks, and comparisons share two columns. At `680px` and below, primary navigation is hidden, all section heads stack, the archive becomes one column with a wider `4 / 5` crop, reels remain two-up, comparisons and profile become single-column, metrics become a vertical ruled list, and the footer stacks. The stage becomes a full-bleed dominant frame with three focusable `4.1rem × 5.35rem` plates stacked as a compact right rail; only the dominant label remains visible. The two-mark client lockup remains a single two-column row and expands from a right-aligned `40rem` maximum to the full mobile width.
 
 **The Asymmetric Plate Rule.** Media collections must keep a dominant frame and a supporting rhythm; equal cards are reserved for repeated reels or client marks where comparison is the job.
 
 ## Elevation & Depth
 
-The system is flat by construction and uses no conventional box shadows. Depth comes from tonal layering, opacity changes, cropped imagery, active borders, saturation shifts, and large blurred violet/ember fields placed behind—not on top of—content. The active stage plate rises perceptually through full opacity, higher saturation, and a brighter rule rather than physical shadow.
+The system is flat by construction and uses no conventional box shadows. Depth comes from tonal layering, opacity changes, cropped imagery, active borders, saturation shifts, and large blurred violet/ember fields placed behind—not on top of—content. The active stage plate rises perceptually through full opacity, higher saturation, a brighter rule, slight image scale, and a `10px` perspective lift rather than physical shadow. Directional scrims belong to the stage plane and preserve foreground legibility without reading as glass.
 
 ### Named Rules
 
@@ -184,7 +184,7 @@ The header is transparent, absolutely positioned over the first viewport, and se
 
 ### Product Plates and Live Stage
 
-The four-frame stage is the signature component. One product plate dominates the left column; three supporting plates fill the right. Inactive plates sit at reduced opacity and saturation. Every `2.4s`, focus advances through the frames unless the visitor hovers, focuses a plate, or prefers reduced motion. The active frame reaches full opacity and saturation, gains a brighter border, and scales its image subtly. Plate labels sit directly on media in translucent optical-black fields.
+The four-frame stage is the signature component. On desktop and tablet, one product plate dominates the left column and three supporting plates fill the right rail behind the foreground copy. Inactive plates sit at reduced opacity and saturation. Every `2.4s`, focus advances through the frames unless the visitor hovers, focuses a plate, or prefers reduced motion. The active frame reaches full opacity, slightly heightened saturation, and a brighter border; it lifts `10px` in perspective while its image scales to `1.035`. On mobile, the first plate becomes a full-bleed backdrop and the other three remain visible, focusable thumbnails in a compact right rail. Plate labels sit directly on media in translucent optical-black fields; mobile hides supporting labels to protect the work.
 
 ### Motion Reels
 
@@ -193,6 +193,14 @@ Four `9 / 16` reels form a one-pixel-divided strip on mineral white. Controls si
 ### Comparison Sliders
 
 Before/after frames layer two full-bleed images and expose the before image through a horizontal clip. A one-pixel mineral divider and circular `2.5rem` handle make the split legible. The native range input covers the entire frame with an east-west cursor and an accessible label; visual labels remain separate and non-interactive.
+
+### Verified-Client Lockup
+
+The client proof is intentionally compact and contains only the two supplied verified marks. On desktop it is a right-aligned, two-column ruled lockup capped at `40rem`; on mobile it retains two columns and fills the available width. Each cell is square-edged, at least `9rem` tall on desktop and `7rem` on mobile. Marks begin grayscale, brightened, and slightly muted; hover restores their source color and full opacity.
+
+### Luminous Contact Field
+
+The final call to action is a deep raised-black field illuminated by separate violet and ember radial sources. A one-pixel inset frame reinforces the stage language, while the oversized centered heading rises above the ambient color. The field is more luminous than the page background but remains dark enough for mineral-white actions and soft supporting copy.
 
 ### Browser Surface
 
@@ -209,6 +217,8 @@ Semantic landmarks, ordered headings, useful media alternative text, labeled con
 - **Do** lead with real product media at full useful scale and retain its portrait crop.
 - **Do** use rules, tone, saturation, and colored light to create hierarchy on dark surfaces.
 - **Do** keep desktop compositions asymmetric while preserving the dominant/supporting relationship on mobile.
+- **Do** keep the mobile stage as one full-bleed dominant image plus three visible, focusable right-rail plates.
+- **Do** keep the verified-client proof to the two supplied marks unless additional clients are explicitly verified.
 - **Do** preserve the mineral-white focus outline and the keyboard/touch behavior of every interactive media control.
 - **Do** treat reduced motion as a complete static presentation, not merely shorter animation.
 - **Do** style browser-level details—selection, scrollbar, theme color, and skip navigation—as part of the same optical world.
@@ -216,6 +226,8 @@ Semantic landmarks, ordered headings, useful media alternative text, labeled con
 ### Don't:
 
 - **Don't** replace the stage with a generic equal-card grid or add rounded agency-style cards.
+- **Don't** hide the three supporting stage frames on mobile or turn them into a swipe-only interaction.
+- **Don't** expand the client lockup with unverified or placeholder marks.
 - **Don't** flood sections with opaque violet or ember; their restraint is what makes them feel luminous.
 - **Don't** add conventional drop shadows, glass panels, glossy pills, or decorative gradients unrelated to stage lighting.
 - **Don't** use Unbounded for long paragraphs or increase label hierarchy with heavy weight.

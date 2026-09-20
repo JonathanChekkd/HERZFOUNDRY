@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-09-20T07:22:06Z",
+  "generatedAt": "2026-09-20T23:12:56Z",
   "title": "Design System: HERZ FOUNDRY",
   "extensions": {
     "colorMeta": {
@@ -95,7 +95,7 @@
       "kind": "card",
       "description": "A cropped optical media plane with a directly overlaid label.",
       "html": "<figure class=\"ds-plate\" tabindex=\"0\"><div class=\"ds-plate-media\"></div><figcaption class=\"ds-plate-label\">Product visualization</figcaption></figure>",
-      "css": ".ds-plate { position:relative; width:15rem; aspect-ratio:9/16; overflow:hidden; margin:0; background:#171719; border:1px solid rgba(242,240,235,.16); opacity:.62; transition:opacity .7s cubic-bezier(.16,1,.3,1), border-color .7s cubic-bezier(.16,1,.3,1); } .ds-plate-media { width:100%; height:100%; background:linear-gradient(135deg, rgba(117,97,255,.4), #171719 48%, rgba(240,104,53,.36)); filter:saturate(.72); transition:filter .7s cubic-bezier(.16,1,.3,1), transform 1.2s cubic-bezier(.16,1,.3,1); } .ds-plate-label { position:absolute; left:.8rem; bottom:.8rem; padding:.4rem .55rem; background:rgba(8,8,8,.78); color:#f2f0eb; font:400 .7rem/1.2 Manrope,sans-serif; letter-spacing:.13em; text-transform:uppercase; } .ds-plate:hover, .ds-plate:focus { opacity:1; border-color:rgba(242,240,235,.52); } .ds-plate:hover .ds-plate-media, .ds-plate:focus .ds-plate-media { filter:saturate(1); transform:scale(1.025); } .ds-plate:focus-visible { outline:2px solid #f2f0eb; outline-offset:5px; }"
+      "css": ".ds-plate { position:relative; width:15rem; aspect-ratio:9/16; overflow:hidden; margin:0; background:#171719; border:1px solid rgba(242,240,235,.12); opacity:.72; perspective:1000px; transition:opacity .7s cubic-bezier(.16,1,.3,1), border-color .7s cubic-bezier(.16,1,.3,1), transform 1.1s cubic-bezier(.16,1,.3,1); } .ds-plate-media { width:100%; height:100%; background:linear-gradient(135deg, rgba(117,97,255,.42), #171719 48%, rgba(240,104,53,.3)); filter:saturate(.78) contrast(1.05); transition:filter .7s cubic-bezier(.16,1,.3,1), transform 1.2s cubic-bezier(.16,1,.3,1); } .ds-plate-label { position:absolute; left:.8rem; bottom:.8rem; padding:.4rem .55rem; background:rgba(8,8,8,.78); color:#f2f0eb; font:400 .7rem/1.2 Manrope,sans-serif; letter-spacing:.13em; text-transform:uppercase; } .ds-plate:hover, .ds-plate:focus { opacity:1; border-color:rgba(242,240,235,.58); transform:translateZ(10px); } .ds-plate:hover .ds-plate-media, .ds-plate:focus .ds-plate-media { filter:saturate(1.05) contrast(1.04); transform:scale(1.035); } .ds-plate:focus-visible { outline:2px solid #f2f0eb; outline-offset:5px; }"
     },
     {
       "name": "Reel Control",
@@ -111,11 +111,25 @@
       "description": "A visible measurement line and circular drag handle for before/after evidence.",
       "html": "<div class=\"ds-compare\"><span class=\"ds-before\">Before</span><span class=\"ds-after\">After</span><span class=\"ds-line\"></span><span class=\"ds-handle\" aria-hidden=\"true\">&#8596;</span><input aria-label=\"Compare before and after\" type=\"range\" min=\"0\" max=\"100\" value=\"50\"></div>",
       "css": ".ds-compare { position:relative; width:15rem; aspect-ratio:9/16; overflow:hidden; background:linear-gradient(90deg,#171719 0 50%,#7561ff 50% 100%); color:#f2f0eb; } .ds-before,.ds-after { position:absolute; bottom:.7rem; z-index:2; padding:.35rem .5rem; background:rgba(8,8,8,.78); font:400 .7rem/1.2 Manrope,sans-serif; letter-spacing:.1em; text-transform:uppercase; pointer-events:none; } .ds-before { left:.7rem; } .ds-after { right:.7rem; } .ds-line { position:absolute; inset:0 auto 0 50%; width:1px; background:#f2f0eb; } .ds-handle { position:absolute; left:50%; top:50%; z-index:2; width:2.5rem; height:2.5rem; border-radius:50%; background:#f2f0eb; color:#080808; display:grid; place-items:center; transform:translate(-50%,-50%); font-weight:600; } .ds-compare input { position:absolute; inset:0; z-index:3; width:100%; height:100%; opacity:0; cursor:ew-resize; } .ds-compare input:focus-visible { outline:2px solid #f2f0eb; outline-offset:-7px; }"
+    },
+    {
+      "name": "Verified-Client Lockup",
+      "kind": "custom",
+      "description": "A compact two-mark proof block with a ruled editorial frame.",
+      "html": "<div class=\"ds-client-lockup\"><div class=\"ds-client-mark\">Client 01</div><div class=\"ds-client-mark\">Client 02</div></div>",
+      "css": ".ds-client-lockup { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); width:min(100%,40rem); margin-left:auto; border-top:1px solid rgba(242,240,235,.16); border-left:1px solid rgba(242,240,235,.16); } .ds-client-mark { min-height:9rem; display:grid; place-items:center; padding:1.5rem; border-right:1px solid rgba(242,240,235,.16); border-bottom:1px solid rgba(242,240,235,.16); color:#aaa8a3; font:400 .7rem/1.2 Manrope,sans-serif; letter-spacing:.12em; text-transform:uppercase; transition:color .3s; } .ds-client-mark:hover { color:#f2f0eb; }"
+    },
+    {
+      "name": "Luminous Contact Field",
+      "kind": "card",
+      "description": "The concluding optical field, framed and illuminated for direct project actions.",
+      "html": "<section class=\"ds-contact\"><h2>Got a project in mind?</h2><a href=\"#\">Send email</a></section>",
+      "css": ".ds-contact { position:relative; overflow:hidden; padding:5rem 2rem; text-align:center; color:#f2f0eb; background:radial-gradient(45rem 30rem at 15% 110%,rgba(117,97,255,.38),transparent 60%),radial-gradient(42rem 28rem at 90% -10%,rgba(240,104,53,.3),transparent 58%),#101011; border-block:1px solid rgba(242,240,235,.16); } .ds-contact::before { content:\"\"; position:absolute; inset:1rem; border:1px solid rgba(242,240,235,.12); pointer-events:none; } .ds-contact h2 { position:relative; max-width:13ch; margin:0 auto 1.5rem; font:400 clamp(2.7rem,6vw,5.7rem)/1 Unbounded,sans-serif; letter-spacing:-.04em; } .ds-contact a { position:relative; display:inline-flex; min-height:3rem; align-items:center; padding:.75rem 1.2rem; border:1px solid #f2f0eb; color:#f2f0eb; font:400 .7rem/1.2 Manrope,sans-serif; letter-spacing:.12em; text-transform:uppercase; text-decoration:none; } .ds-contact a:hover { background:#f2f0eb; color:#080808; } .ds-contact a:focus-visible { outline:2px solid #f2f0eb; outline-offset:5px; }"
     }
   ],
   "narrative": {
     "northStar": "Chromatic Light Stage",
-    "overview": "HERZ FOUNDRY behaves like a controlled optical set rather than a generic dark-agency card stack. Near-black surfaces make the supplied product imagery the brightest evidence; mineral-white type, thin measurement rules, and restrained spectral color create the sense of a precise studio instrument. Violet and ember are atmospheric light sources, never broad brand paint.\n\nThe system is cinematic but disciplined. Cropped portrait media, hard-edged controls, asymmetric image plates, and large stretches of darkness build tension without obscuring the work. The experience remains direct: the product is visible immediately, production rigor is demonstrated with real media, and contact actions are unmistakable.",
+    "overview": "HERZ FOUNDRY behaves like a controlled optical set rather than a generic dark-agency card stack. Near-black surfaces make the supplied product imagery the brightest evidence; mineral-white type, thin measurement rules, and restrained spectral color create the sense of a precise studio instrument. The first viewport places decisive type directly over full-scale CGI work, while violet and ember act as atmospheric light sources rather than broad brand paint.\n\nThe system is cinematic but disciplined. Cropped portrait media, hard-edged controls, asymmetric image plates, and large stretches of darkness build tension without obscuring the work. The experience remains direct: the product is visible immediately, production rigor is demonstrated with real media, and contact actions are unmistakable.",
     "keyCharacteristics": [
       "Near-black optical surfaces with mineral-white typography.",
       "Restrained violet and ember light fields used for atmosphere and orientation.",
@@ -136,12 +150,16 @@
       "Do lead with real product media at full useful scale and retain its portrait crop.",
       "Do use rules, tone, saturation, and colored light to create hierarchy on dark surfaces.",
       "Do keep desktop compositions asymmetric while preserving the dominant/supporting relationship on mobile.",
+      "Do keep the mobile stage as one full-bleed dominant image plus three visible, focusable right-rail plates.",
+      "Do keep the verified-client proof to the two supplied marks unless additional clients are explicitly verified.",
       "Do preserve the mineral-white focus outline and the keyboard/touch behavior of every interactive media control.",
       "Do treat reduced motion as a complete static presentation, not merely shorter animation.",
       "Do style browser-level details—selection, scrollbar, theme color, and skip navigation—as part of the same optical world."
     ],
     "donts": [
       "Don't replace the stage with a generic equal-card grid or add rounded agency-style cards.",
+      "Don't hide the three supporting stage frames on mobile or turn them into a swipe-only interaction.",
+      "Don't expand the client lockup with unverified or placeholder marks.",
       "Don't flood sections with opaque violet or ember; their restraint is what makes them feel luminous.",
       "Don't add conventional drop shadows, glass panels, glossy pills, or decorative gradients unrelated to stage lighting.",
       "Don't use Unbounded for long paragraphs or increase label hierarchy with heavy weight.",
